@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Augmentation</title>
+    <link href="{{ url_for('static', path='/styles.css') }}" rel="stylesheet">
+</head>
+<body>
+    <div class="container">
+        <h1>Upload an Image for Augmentation</h1>
+        <form action="/upload/" method="post" enctype="multipart/form-data">
+            <input type="file" name="file" required>
+            <select name="augment_count">
+                <option value="10">10</option>
+                <option value="20">20</option>
+                <option value="30">30</option>
+                <option value="40">40</option>
+                <option value="50">50</option>
+                
+            </select>
+            <button type="submit">Upload and Augment</button>
+        </form>
+    </div>
+</body>
+</html>
